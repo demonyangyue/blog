@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥5 - 添加属性方法
+date: 2015-06-16
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

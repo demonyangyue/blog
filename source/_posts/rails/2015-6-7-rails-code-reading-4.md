@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥4 - 模板缓存
+date: 2015-06-07
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

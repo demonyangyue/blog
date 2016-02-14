@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥3 - 模板查找
+date: 2015-06-1
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

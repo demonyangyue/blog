@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥7 - autoload 机制
+date: 2015-06-24
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

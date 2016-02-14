@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥6 - 数据验证
+date: 2015-06-17
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rails源码管窥2 - render内幕
+date: 2015-05-28
+categories: Programming
+tags: [Rails, Web]
 ---
 
 ## 引言

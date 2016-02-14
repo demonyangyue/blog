@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Mesos 札记
+date: 2015-09-16
+categories: Programming
+tags: [Mesos, Cloud Computing]
 ---
 
 ## 引言
