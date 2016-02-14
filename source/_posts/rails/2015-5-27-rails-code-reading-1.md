@@ -18,6 +18,7 @@ tags: [Rails, Web]
 
 是为引言。
 
+<!--more-->
 ## Vim + Ctags
 
 Vim 作为编辑器的神，配合上Ctags插件，阅读代码也是行云流水。

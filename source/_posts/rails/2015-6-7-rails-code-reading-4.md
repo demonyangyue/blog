@@ -15,6 +15,7 @@ tags: [Rails, Web]
 
 让我们一起到Rails源码中寻找答案吧。
 
+<!--more-->
 ## Rails 模板缓存机制
 
 上一节中我们提到了ActionView::Resolver类中`find_all()`方法的定义：

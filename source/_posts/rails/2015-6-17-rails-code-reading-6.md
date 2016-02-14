@@ -21,6 +21,7 @@ tags: [Rails, Web]
 
 Rails通过ActiveModel模块提供了一系列预定义的类来辅助验证，用户也可以根据自己的需求来自定义验证逻辑。
 
+<!--more-->
 ## ActiveModel 数据验证
 
 看一个简单的例子，假设我们需要定义一个`Person`类型，要求其实例必须具有`:name`字段：

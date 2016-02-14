@@ -21,6 +21,7 @@ Rails通过`ActiveSupport::Autoload`模块，免去了手动加载类或者模�
 
  当处于开发模式时，如果开发者修改了controller, model等目录下的源码文件，无需重启服务器，下一次请求rails会自动读取最新的定义，后面我们会一起探索这样的魔法是如何实现的。
 
+<!--more-->
 ## ruby中的autoload
 
 ruby本身通过`Kernel#autoload`方法，提供了常量自动加载机制，例如：

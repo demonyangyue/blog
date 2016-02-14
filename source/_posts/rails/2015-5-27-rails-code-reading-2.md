@@ -9,6 +9,7 @@ tags: [Rails, Web]
 ## 引言
 Model-View-Controller(MVC)是Rails的核心架构。在Controller定义的方法中，最后一步通常是调用render函数，将Controller生成的数据渲染到指定的template， 例如：`format.json { render json: @article.errors, status: :unprocessable_entity }` , 那么render函数在调用时，幕后做了什么呢？让我们一起开启探索之旅吧。
 
+<!--more-->
 ## Render函数调用栈
 开启Byebug进入调试模式，输入step（s）进入render方法内部：
 > /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb

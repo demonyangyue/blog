@@ -11,6 +11,7 @@ tags: [Mesos, Cloud Computing]
 
 本文是Mesos的学习笔记，主要基于[Mesos white paper](http://mesos.berkeley.edu/mesos_tech_report.pdf), 和[Mesos系列博客](http://cloudarchitectmusings.com/2015/03/23/apache-mesos-the-true-os-for-the-software-defined-data-center/)。
 
+<!--more-->
 ## 设计
 
 ### 挑战

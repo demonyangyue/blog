@@ -11,6 +11,7 @@ tags: [Rails, Web]
 
 `ActiveModel`实现了和model相关的许多功能，比如`validation`,`ActiveRecord`在`ActiveModel`的基础上，提供了和数据库相关的ORM支持，`ActiveResource`在`ActiveModel`的基础上，提供了对`WebService API`的支持。本节我们关注`ActiveModel`相关的模块。
 
+<!--more-->
 ## 添加Attribute Methods
 
 `ActiveModel::AttributeMethods`可以给类动态添加属性方法。

@@ -9,6 +9,7 @@ tags: [Rails, Web]
 ## 引言
 上一篇中通过对render函数调用栈的学习，我们理解了controller在调用render函数时，如何找到renderer并渲染到相应的template。但是rails是如何知道应该渲染哪个模板的呢？这正是本节我们关注的问题。
 
+<!--more-->
 ##  Rails模板查找机制
 在上一节，我们提到`_render_template()`方法的定义为：
 >  /usr/local/rvm/gems/ruby-2.2.1/gems/actionview-4.2.1/lib/action_view/rendering.rb
