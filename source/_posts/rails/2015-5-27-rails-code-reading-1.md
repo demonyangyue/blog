@@ -1,4 +1,4 @@
----
+[[---]]
 layout: post
 title: Rails源码管窥1 - 工具篇
 date: 2015-05-27

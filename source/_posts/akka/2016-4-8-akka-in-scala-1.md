@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Akka in Scala Part 1: Java is Shit
+title: Akka in Scala Part 1 - Java is Shit
 date: 2016-04-08
 categories: Programming
 tags: [Akka, Scala, Cloud Computing]
@@ -16,13 +16,16 @@ tags: [Akka, Scala, Cloud Computing]
 
 Java最大的魅力在于，这门语言总在试图表达正确的概念，却总能展现丑陋的实现，这一点在并发编程领域，体现得淋漓尽致。
 
+
+<!--more-->
+
 ## 无尽的绝望
 
 Java 并发基于线程和锁模型，相对于多进程，更加轻量并且易于数据共享。
 
-然而 **共享可变状态**， 这个并发世界的魔鬼一旦从瓶中放出，厄运的齿轮开始不停转动。
+然而 **共享可变状态**， 这个并发世界的魔鬼一旦从瓶中放出，厄运的齿轮便开始不停转动。
 
-我们创建一个最简单计数器类，为了支持多个线程同时进行读写，于是引入synchoronized进行同步：
+我们创建一个最简单计数器类，为了支持多个线程同时读写，引入synchoronized进行同步：
 
 ```java
 class Counter {
@@ -41,7 +44,7 @@ class Counter {
 
 ### 乱序执行
 
-为了提高代码运行的效率，编译器会做静态优化，JVM会做动态优化，这些优化可能会打乱代码的执行顺序：
+然而在现实世界中，代码会被乱序执行。为了提高代码运行的效率，编译器会做静态优化，JVM会做动态优化，这些优化可能会打乱代码的执行顺序：
 
 ```java
 class Hell {
@@ -88,7 +91,7 @@ static Thread t2 = new Thread() {
 
 ```
 
-在一个线程中的修改可能在另一个线程中不可见，导致这个循环可能永远无法停止。
+在一个线程中对`name`修改可能在另一个线程中不可见，导致这个循环永远无法停止。
 
 ### Java内存模型
 为了解决乱序执行和内存可见性的问题，依据Java内存模型(Java Memory Mode, JMM) [JSR 133](https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html) 的定义, 我们需要把读操作和写操作都加锁进行同步。
@@ -127,7 +130,7 @@ static Thread t2 = new Thread() {
 
 ## 反思
 
-你可以使用java.concurrent.util 之类的帮助解决某些特定的问题，但是核心的缺陷——**共享可变状态**， 并没有被真正克服。
+你可以使用*java.concurrent.util*之类的工具帮助解决某些特定的问题，但是核心的缺陷——**共享可变状态**， 并没有被真正克服。
 
 线程，锁，信号量，条件变量，关于并发编程我们已经学习了很多，最宝贵的经验是——并发编程很难，难以开发，[难以测试](http://stackoverflow.com/questions/12159/how-should-i-unit-test-threaded-code)，难以重构。
 
