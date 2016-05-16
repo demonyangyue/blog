@@ -180,7 +180,7 @@ class RedPacketGenerator extends Actor with ActorLogging {
 
 ## 编译运行
 
-可以从[github](https://github.com/demonyangyue/RedPacke)下载本节完整代码并运行：
+可以从[github](https://github.com/demonyangyue/RedPacket)下载本节完整代码并运行：
 
 ```bash
 git clone https://github.com/demonyangyue/RedPacket
