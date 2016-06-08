@@ -104,7 +104,7 @@ object RedPacketShaker {
 
 最常用的消息发送方法是`tell`，按"send and forget"形式。Tell保证最多只发送一次消息(`at most once`)，但并不保证消息一定会被送达目的地。
 
-相对于其它的消息传输保证机制, 比如 `at least once`（如GFS中的写副本操作）或`exactly once`（如TCP传输）,`at most once`机制最为简单灵活，并且易于容错。 Akka框架本身并不提供额外的消息送达保证，而是让客户代码自己基于业务逻辑去实现。
+相对于其它的消息传输保证机制, 比如 `at least once`（如GFS中的写操作）或`exactly once`（如TCP传输）,`at most once`机制最为简单灵活，并且易于容错。 Akka框架本身并不提供额外的消息送达保证，而是让客户代码自己基于业务逻辑去实现。
 
 tell 方法的定义为：
 
