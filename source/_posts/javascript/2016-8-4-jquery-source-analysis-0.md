@@ -1,6 +1,6 @@
 ---
 layout: post
-title: jQuery 源码精粹 -- 0
+title: jQuery 源码精粹0 -- 引言
 date: 2016-08-04
 categories: Programming
 tags: [JavaScript, jQuery]
