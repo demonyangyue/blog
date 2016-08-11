@@ -53,10 +53,6 @@ find src -name "*.js" | xargs wc -l
 	- jquery.js
 * 核心模块
 	- core.js
-* ajax 模块
-	- ajax.js
-	- deferred.js
-	- callbacks.js
 * 选择器模块
 	- selector-sizzle.js
 	- selector-native.js
@@ -67,6 +63,10 @@ find src -name "*.js" | xargs wc -l
 	- manipulation.js
 	- offset.js
 	- traversing.js
+* ajax 模块
+	- ajax.js
+	- deferred.js
+	- callbacks.js
 * 事件模块
 	- event.js	
 * 效果及动画模块	
@@ -75,7 +75,7 @@ find src -name "*.js" | xargs wc -l
 	
 ## jquery.js
 
-```
+```javascript
 define( [
 	"./core",
 	"./selector",
@@ -100,7 +100,7 @@ return ( window.jQuery = window.$ = jQuery );
 
 jQuery利用grunt定义编译任务，从代码`build/tasks/build.js`中，我们可以看到代码块：
 
-```
+```javascript
 function convert( name, path, contents ) {
 //...
 // Remove define wrappers, closure ends, and empty declarations
@@ -118,7 +118,7 @@ function convert( name, path, contents ) {
 
 可以在`dist/jquery.js`找到答案，简化后的版本：
 
-```
+```javascript
 ( function( global, factory ) {
     factory(global);
 })(window, function (window, noGlobal){

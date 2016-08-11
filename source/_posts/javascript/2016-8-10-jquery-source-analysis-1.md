@@ -18,7 +18,7 @@ tags: [JavaScript, jQuery]
 
 `core.js`首先声明了一系列的依赖模块：
 
-```
+```javascript
 define( [
 	"./var/arr",
 	"./var/document",
@@ -41,7 +41,7 @@ define( [
 
 这些模块提供了对通用功能的支持，通常比较简短，比如`var/document`的内容为：
 
-```
+```javascript
 define( function() {
 	"use strict";
 
@@ -55,7 +55,7 @@ define( function() {
 
 ### 片段二：
 
-```
+```javascript
 var
 	version = "3.1.0",
 
@@ -70,11 +70,11 @@ var
 
 jQuery的API调用形式是`$(selector).action(props)`, 从这段代码可以看出，`$(selector)`返回的`jQuery object`,实际上是一个`jQuery.fn.init`实例，通过阅读`core/init.js`文件，我们可以知道在初始化实例时，解析传入的`selector`参数，根据不同的`selector`形式，生成相应的`jQuery object`(具体逻辑在下一篇分析), `jQuery object`是一个类似数组的对象，代表了一组被选中的DOM节点的集合。
 
-## 片段三
+### 片段三
 
 `core.js`下一个代码片段:
 
-```
+```javascript
 jQuery.fn = jQuery.prototype = {
 	each: function() {...},
 	map: function() {...},
@@ -88,17 +88,17 @@ jQuery.fn = jQuery.prototype = {
 
 同时在`src/init.js`的末尾，有这段代码：
 
-```
+```javascript
 init.prototype = jQuery.fn;
 ```
 
 于是`jQuery object`实际和`jQuery.fn.init object`实际是等价的，正如我们在片段二所提到的。
 
-## 片段四
+### 片段四
 
 `core.js`末尾的代码片段：
 
-```
+```javascript
 jQuery.extend = jQuery.fn.extend = function() {...};
 jQuery.extend({
 	error: function( ) {},
