@@ -61,7 +61,6 @@ find src -name "*.js" | xargs wc -l
 	- css.js
 	- data.js
 	- manipulation.js
-	- offset.js
 	- traversing.js
 * ajax 模块
 	- ajax.js
