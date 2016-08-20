@@ -138,4 +138,4 @@ jQuery 主要解决两个问题：
 				selector( jQuery );
 		}
 ```
-这里处理的是一个特殊情况，对于简写形式`$(function)`,调用其完整版函数`document.ready(selector)`。
+这里处理的是一个特殊情况，对于简写形式`$(function)`,调用其完整版函数`document.ready(function)`。

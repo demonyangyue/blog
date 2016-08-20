@@ -37,13 +37,12 @@ jQuery支持丰富的DOM节点操作：
 
 实际的代码实现：
 
-```jvascript
+```javascript
 jQuery.fn.extend( {
 	attr: function( name, value ) {
 		return access( this, jQuery.attr, name, value, arguments.length > 1 );
 	}
 } );
-
 ```
 
 `access`方法：
