@@ -8,7 +8,7 @@ tags: [JavaScript, jQuery]
 
 ## 引言
 
-翻过`Defer`和`Promise`的大山，我们来到了本系列博客的最后一站，这一篇我们来研究`event.js`与`animate.js`。
+翻过`Defer`和`Promise`的大山，我们来到了本系列博客的最后一站，这一篇我们来研究`event.js`与`effect.js`。
 
 <!--more-->
 

@@ -6,14 +6,25 @@ categories: Programming
 tags: [Akka, Scala, Cloud Computing]
 ---
 
-## 缘起
-Actor和Future是Akka并发模型的两大基石。
+## 初识Akka
+
+并发，是计算机世界与生俱来的命题，从CPU的分时处理，到web网站响应多用户请求，无处不彰显着并发的力量。
+
+概言之，并发模型可分为两种，共享可变状态模型和消息传递模型。
+
+多线程是共享可变状态模型的经典例子，上一篇我们已经简要解释了这种模型的问题。
+
+消息传递模型有两种经典的实现，一种是CSP(Communicating Sequential Processes), 例如Golang中的Goroutine和Channel， 另一种是Actor, 例如Erlang的OTP和Scala的Akka。相对于CSP，Actor更加适应分布式环境。
+
+<!--more-->
+
+## 核心概念
+
+在Akka中，Actor和Future两大核心概念。
 
 Actor最经典的应用是Erlang， 在Erlang中，Actor对应轻量级进程，在Akka中，Actor对应着JVM中的轻量级对象。传统线程的创建和切换需要消耗大量的内存和机器周期，而Akka可以轻易并发数百万Actor。
 
 Future源自函数式编程，使我们可以方便地实现异步API。异步API典型的例子是NodeJS, 所有的调用都是异步调用，调用者立即返回，被调用函数在完成之后执行回调函数。异步API在处理大量的并发请求时，比同步API更加优雅和高效。
-
-<!--more-->
 
 ## Akka之道
 
@@ -21,7 +32,7 @@ Future源自函数式编程，使我们可以方便地实现异步API。异步AP
 
 传统并发模型错误的根源在于**共享可变状态**，Akka如何解决这个问题呢？
 
-Akka由Scala实现，继承了函数式编程的基因。在函数式编程的世界里，不存在可变量，要获得一个新的值，就需要创建一个新的对象。在传统的函数式编程语言如Lisp及Haskell中，需要用Monad这样的复杂方案来实现副作用。
+Akka由Scala实现，继承了函数式编程的基因。在函数式编程的世界里，不存在可变量，要获得一个新的值，就需要创建一个新的对象。在纯粹的函数式编程语言如Haskell中，需要用Monad这样的复杂机制来支持状态的变迁。
 
 Scala折衷了函数式编程和面向对象编程，在Akka中，可变量(var)并没有被完全禁绝，但是被严密地封装在Actor内部：
 
@@ -78,7 +89,7 @@ val futureResult = Future { expensive_calculation() }
 
 ### Let it crash
 
-目前分布式系统的容错机制，大多借鉴了Erlang “let it crash”的思想，比如Hadoop中的冗余备份(replication), Spark 中的Checkpoint和Linage。“let it crash”的核心理念是，出错是常态，我们不要去试图修复，而是创建一个新的。
+目前分布式系统的容错机制，大多借鉴了Erlang “let it crash”的思想，比如Hadoop中的冗余备份(replication), Spark 中的Checkpoint和Linage。“let it crash”的核心理念是，出错是常态，我们不要去试图修复，而是创建一个新的组件。
 
 如果你的车坏了，通常的想法是会去4S店维修，但是有可能修好，也有可能修不好，有也可能修好了却引发别的部件故障。土豪的做法是 —— 换辆新的。Akka的世界里，我们每个人都是土豪。
 
@@ -88,7 +99,7 @@ val futureResult = Future { expensive_calculation() }
 
 ![](/images/error-kernel-pattern.png)
 
-Error kernel pattern的同样来源于Erlang，其核心思想在于，处于上层的Actor承担风险较小的任务，处于底层的Actor承担更加危险的任何，出错之后就"let it crash"。
+Error kernel pattern的同样来源于Erlang，其核心思想在于，处于上层的Actor承担风险较小的任务，处于底层的Actor承担更加危险的任务，出错之后就"let it crash"。
 
 ### 可扩展(scalable)
 
