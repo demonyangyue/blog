@@ -26,7 +26,7 @@ sbt run
 
 整个程序的框架为:
 
-![](/images/actor-dispatcher.png)
+![](/images/red-packet.png)
 
 后续章节我们会逐步解释各个模块。
 

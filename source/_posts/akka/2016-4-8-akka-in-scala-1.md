@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Akka in Scala Part 1 - Java is Shit
+title: Akka in Scala Part 1 - Java dosen't work
 date: 2016-04-08
 categories: Programming
 tags: [Akka, Scala, Cloud Computing]
@@ -8,7 +8,7 @@ tags: [Akka, Scala, Cloud Computing]
 
 ## Java 之殇
 
-我无意挑起编程宗教间的争论，仅仅想阐述一个简单的事实 -- Java is shit.
+我无意挑起编程宗教间的争论，仅仅想阐述一个简单的事实 -- Java doesn't work.
 
 你从最优秀的Java书籍中学到了解耦接口与实现，于是开始热衷于设计出各种各样的接口，然而这些接口要么支持的方法太少，沦为几乎无用的鸡肋，要么需要实现方法太多，给子类造成沉重的负担。Java还慷慨地给了你额外的’奖励’ -- 同样的方法声明在各个子类中需要一遍又一遍地重复，如同遭受了计算机世界中恶灵的诅咒。
 
