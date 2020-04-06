@@ -6,14 +6,13 @@ categories: Programming
 tags: [Scheme, Scala, Interperter]
 ---
 
-<!--more-->
-
 ## 缘起
 
 最早见到的`Scheme`解释器实现，是在[`The Litter Schemer`的最后一章](http://uternet.github.io/TLS/10.html)。虽然书中实现的是一个原型版本，只能解析最基本的形式，并且用外部的Scheme解释器去计算解析出的Scheme表达式(接近于作弊)，但是还是可以隐约地感受到，函数式编程在解决复杂问题时的简洁有力。
 
 那么设计一个实际的`Scheme`解释器，会遇到哪些挑战呢？函数式编程思想在解决这些问题的时候，又会起到怎样的作用呢？带着对这些问题的好奇，用两个星期的业余时间，尝试写了一个自己的[scheme解释器](https://github.com/demonyangyue/SchemeInterpreter)。
 
+<!--more-->
 
 ## 设计
 
