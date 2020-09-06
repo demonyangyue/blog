@@ -6,8 +6,6 @@ categories: Programming
 tags: [Big Data, Cloud Computing]
 ---
 
-# 设计数据密集型应用 —— 序
-
 ## 引言
 最近阅读了《Designing Data-Intensive Applications》，结合自己的理解，总结一些心得体会。
 
@@ -28,11 +26,12 @@ tags: [Big Data, Cloud Computing]
 数据密集型应用(data-intensive application), 和计算密集型应用(compute-intensive application)相对应。计算密集型应用的瓶颈在于CPU的处理速度，而数据密集型应用更大的挑战是数据———— 数据量、数据的复杂度以及数据的变化速率。
 
 我们平时接触的很多系统，都属于数据密集型应用，典型的有:
-    * 数据库
-    * 缓存
-    * 搜索引擎
-    * 流式处理。A应用发出一条消息，B应用进行异步处理。
-    * 批处理。对数据进行周期性地分析统计统计。
+
+* 数据库
+* 缓存
+* 搜索引擎
+* 流式处理。A应用发出一条消息，B应用进行异步处理。
+* 批处理。对数据进行周期性地分析统计统计。
     
 ##  为什么需要理解数据密集型应用
 
