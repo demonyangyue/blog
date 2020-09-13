@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  设计数据密集型应用 —— 序
+title:  设计数据密集型应用1 —— 序
 date: 2020-09-06
 categories: Programming
 tags: [Big Data, Cloud Computing]
